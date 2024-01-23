@@ -161,7 +161,7 @@ const HeroSection = () => {
                 className="h-full w-full blur-sm"
               >
                 <Image
-                  src="/3.jpg"
+                  src="/projects/news-app-1.png"
                   alt="recente project photo"
                   height={500}
                   width={500}

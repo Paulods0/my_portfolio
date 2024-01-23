@@ -97,5 +97,3 @@ export const TEXTS = {
     },
   },
 }
-
-// export

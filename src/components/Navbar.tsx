@@ -18,6 +18,7 @@ export const nav_links = [
     title: "contact",
   },
 ]
+
 const emojiVariant = {
   initial: {
     scale: 0.4,
@@ -43,7 +44,6 @@ const linksVariant = {
     transition: {
       duration: "0.2",
       delay: 0.6,
-      // ease: "easeInOut",
     },
   },
 }
@@ -66,18 +66,11 @@ const MotionLink = motion(Link)
 const Navbar: React.FC<NavbarProp> = ({ section }) => {
   const { language, setChangeLanguage } = useLanguage()
 
-  // const changeLanguage = () => {
-  //   if (language === "en") {
-  //     setChangeLanguage()
-  //   } else {
-  //     setChangeLanguage()
-  //   }
-  // }
-
   const goToAboutSection = () => {
     document.getElementById("about-section")!.scrollIntoView()
   }
   const hours = getHours()
+
   return (
     <nav className="fixed lg:h-[40px] h-[50px] py-8 z-20 inset-0 lg:bg-transparent bg-black w-full mx-auto justify-around items-center lg:justify-center lg:items-center flex px-4 lg:p-12">
       <Link
@@ -117,26 +110,7 @@ const Navbar: React.FC<NavbarProp> = ({ section }) => {
         </MotionLink>
 
         <div className="w-full flex space-x-12 items-center justify-center">
-          {language === "en" ? (
-            <MotionLink
-              initial={{ opacity: 0, y: -30 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                transition: {
-                  delay: 0.4,
-                },
-              }}
-              href="RESUME.pdf"
-              download
-              target="_blank"
-              className={`ml-24 lg:self-center bg-black/20 backdrop-blur-lg hover:text-laranja/50 transition-all duration-300 uppercase hidden text-xl font-bold text-laranja px-4 py-2 rounded-full ${
-                section ? "lg:hidden" : "lg:block"
-              }`}
-            >
-              RESUME
-            </MotionLink>
-          ) : (
+          <div>
             <MotionLink
               initial={{ opacity: 0, y: -30 }}
               animate={{
@@ -155,7 +129,7 @@ const Navbar: React.FC<NavbarProp> = ({ section }) => {
             >
               CV
             </MotionLink>
-          )}
+          </div>
           <div className="mr-24 flex gap-4 relative">
             <button
               className={`text-[18px] border-r border-cinza pr-4 ${

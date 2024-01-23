@@ -11,7 +11,7 @@ import "swiper/css/effect-coverflow"
 import "swiper/css/pagination"
 
 import Link from "next/link"
-import { motion, useAnimation, useInView } from "framer-motion"
+import { motion } from "framer-motion"
 
 const projectImages = [
   {

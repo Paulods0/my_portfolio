@@ -1,7 +1,20 @@
 import React, { useEffect, useRef } from "react"
 
 import "./skills-section.css"
+
+import { motion, useTransform, useScroll } from "framer-motion"
+import useLanguage from "@/context/LanguangeContext"
+import { TEXTS } from "@/constants"
 import {
+  HTML,
+  CSS,
+  JavaScriptIcon,
+  TypeScriptIcon,
+  KOTLIN,
+  JAVA,
+  NodeJsIcon,
+  FIREBASE,
+  ANDROID_STUDIO,
   DOCKER,
   FIGMA,
   GIT,
@@ -18,16 +31,6 @@ import {
   SQUAREDECORATION3,
   VSCODE,
   YARN,
-} from "./Icons"
-import { motion, useTransform, useScroll } from "framer-motion"
-import {
-  HTML,
-  CSS,
-  JavaScriptIcon,
-  TypeScriptIcon,
-  KOTLIN,
-  JAVA,
-  NodeJsIcon,
   SPRINGBOOT,
   NextJsIcon,
   ReactIcon,
@@ -36,8 +39,6 @@ import {
   FRAMER,
   BOOTSTRAP,
 } from "./Icons"
-import useLanguage from "@/context/LanguangeContext"
-import { TEXTS } from "@/constants"
 
 const SkillsSection = () => {
   const { language } = useLanguage()
@@ -57,6 +58,7 @@ const SkillsSection = () => {
         <JAVA />,
         <NodeJsIcon />,
         <PostgresIcon />,
+        <FIREBASE />,
         <MongoDBIcon />,
       ],
     },
@@ -91,6 +93,7 @@ const SkillsSection = () => {
         <GIT />,
         <DOCKER />,
         <VSCODE />,
+        <ANDROID_STUDIO />,
         <INTELIJ />,
         <YARN />,
         <NPM />,
