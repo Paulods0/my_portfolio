@@ -126,7 +126,7 @@ export const projects = [
     idn: 7,
     title: "Food App",
     desc: "Mobile App",
-    techs: [<ReactIcon />],
+    techs: [<ReactIcon />, <TAILWIND />, <FIREBASE />],
     links: {
       github_link: "https://github.com/Paulods0/food-app-RN",
       live_link: "",

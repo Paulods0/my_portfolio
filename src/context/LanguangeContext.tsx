@@ -14,9 +14,9 @@ const LanguageContext = createContext<languageContextType>({
 const getFromLocalStorage = () => {
   if (typeof window !== "undefined") {
     const value = localStorage.getItem("lang")
-    return value === "en" || value === "pt" ? value : "en"
+    return value === "en" || value === "pt" ? value : "pt"
   }
-  return "en"
+  return "pt"
 }
 
 export const LanguageContextProvider = ({
@@ -29,7 +29,7 @@ export const LanguageContextProvider = ({
   })
 
   const setChangeLanguage = () => {
-    setLanguage(language === "en" ? "pt" : "en")
+    setLanguage(language === "pt" ? "en" : "pt")
   }
 
   useEffect(() => {
